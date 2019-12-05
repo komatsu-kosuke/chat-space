@@ -11,7 +11,7 @@ usersテーブル
 
 ### Association
 - has_many :groups, through: :group_user
-  has_many :groups
+  has_many :group_user
 - has_many :message
 
 groupsテーブル
@@ -23,7 +23,7 @@ groupsテーブル
 
 ### Association
 - has_many :users, through: :group_user
-  has_meny :users
+  has_meny :group_user
 - has_many :message
 
 
@@ -45,8 +45,8 @@ messagesテーブル
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
-|text|text|null: false, foreign_key: true|
-|image|string|null: false, foreign_key: true|
+|text|text|null: true, foreign_key: true|
+|image|string|null: true, foreign_key: true|
 
 ### Association
 - belongs_to :group
