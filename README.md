@@ -12,7 +12,7 @@ usersテーブル
 ### Association
 - has_many :groups, through: :group_user
   has_many :group_user
-- has_many :message
+- has_many :messages
 
 groupsテーブル
 
@@ -24,7 +24,7 @@ groupsテーブル
 ### Association
 - has_many :users, through: :group_user
   has_meny :group_user
-- has_many :message
+- has_many :messages
 
 
 groups_usersテーブル
