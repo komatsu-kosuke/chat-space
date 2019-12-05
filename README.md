@@ -36,6 +36,7 @@ groups_usersテーブル
 - belongs_to :group
 - belongs_to :user
 
+
 messagesテーブル
 
 |Column|Type|Options|
@@ -48,5 +49,4 @@ messagesテーブル
 ### Association
 - belongs_to :group
 - belongs_to :user
-
 
