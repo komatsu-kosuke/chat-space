@@ -4,26 +4,24 @@ usersテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|password|integer|null: false, foreign_key: true|
-|email|string|null: false, foreign_key: true|
-|nickname|string|null: false, foreign_key: true|
+|password|integer|null: false
+|email|string|null: false
+|nickname|string|null: false
 
 ### Association
-- has_many :groups, through: :group_user
-  has_many :group_user
+- has_many :groups, through: :group_users
+  has_many :group_users
 - has_many :messages
 
 groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false, foreign_key: true|
-|title|string|null: false, foreign_key: true|
+|name|string|null: false
 
 ### Association
-- has_many :users, through: :group_user
-  has_meny :group_user
+- has_many :users, through: :group_users
+  has_meny :group_users
 - has_many :messages
 
 
@@ -45,8 +43,8 @@ messagesテーブル
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
-|text|text|null: true, foreign_key: true|
-|image|string|null: true, foreign_key: true|
+|text|text|
+|image|string|
 
 ### Association
 - belongs_to :group
