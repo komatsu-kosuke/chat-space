@@ -10,7 +10,8 @@
 // @import "mixins/vendor_prefix";
 @import "modules/flash";
 // @import "messages/side_bar";
-// @import "modules/chat";
+@import "modules/chat";
 @import "user";
-@import "messages.scss";
+@import "messages";
+@import "group";
 
