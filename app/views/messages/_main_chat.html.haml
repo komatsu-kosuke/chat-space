@@ -3,26 +3,20 @@
   .main-header
     .main-header__left-box
       %h2.main-header__left-box__current-group
-        名古屋コーチン
+        = @group.name
       %ul.main-header__left-box__menber
-        Menber:
-        %li.main-header__left-box__menber__name nizi
+        = @group.users.name
+        %li.main-header__left-box__menber__name 
     = link_to edit_group_path(current_user), class:"main-header__edit-btn" do
       Edit
   .messages
-    .message
-      .message__user
-        nizi
-        .message__day
-          2019/12/08(sun)02:30:00
-      .message__text
-        世界の山ちゃん
+    = render @messages
   .form
     .new-message
-      .input-box
-        type a message
-        %label{class: "input-box__image"}
-          = icon('fas', 'image')
-          %input{type: "file", class: "hidden"}
-      .input-send
-        Send
+      = form_for [@group, @message] do |f|
+        .input-box
+          = f.text_field :content, class: 'input-box__text', placeholder: 'type a message'
+          = f.label :image, class: 'input-box__image' do
+            = icon('fas', 'image')
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'input-send'
