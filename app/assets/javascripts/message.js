@@ -49,7 +49,7 @@ $(function(){
       var html = buildHTML(message);
       $('.messages').append(html);
       $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
-      $('.message__content').val('');
+      $(".new_message")[0].reset();
       $('.input-send').prop('disabled',false);
     })
     .fail(function(){
