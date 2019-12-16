@@ -8,3 +8,7 @@
       %p.lower-message__content
         = message.content
     = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
+
+
+-# ・描画した場合はhamlではなくHTMLだということ。
+-# ・この文面では、インスタンス変数名（renderで渡している）が使用されているが、js側だと使用できない。

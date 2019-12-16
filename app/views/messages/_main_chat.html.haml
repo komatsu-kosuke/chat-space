@@ -5,7 +5,8 @@
       %h2.main-header__left-box__current-group
         = @group.name
       %ul.main-header__left-box__menber
-        = @group.users.name
+        - @group.users.each do |user|
+          = user.name
         %li.main-header__left-box__menber__name 
     = link_to edit_group_path(current_user), class:"main-header__edit-btn" do
       Edit
