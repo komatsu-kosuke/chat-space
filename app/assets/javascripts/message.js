@@ -81,8 +81,8 @@ $(function(){
       $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight});
     })
     .fail(function() {
-      console.log('エラーです');
+      alert('エラーです');
     });
   };
-  setInterval(reloadMessages, 3000);
+  setInterval(reloadMessages, 7000);
 })
