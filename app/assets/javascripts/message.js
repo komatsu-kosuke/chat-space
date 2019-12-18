@@ -67,7 +67,7 @@ $(function(){
       type: 'get',
       dataType: 'json',
       //dataオプションでリクエストに値を含める
-      data: {id: last_message_id}
+      data: {last_id: last_message_id}
     })
     .done(function(messages) {
       //追加するHTMLの入れ物を作る
