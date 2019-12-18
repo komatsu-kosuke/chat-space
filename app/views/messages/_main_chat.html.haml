@@ -4,7 +4,8 @@
     .main-header__left-box
       %h2.main-header__left-box__current-group
         = @group.name
-      %ul.main-header__left-box__menber
+      %ul.main-header__left-box__menber 
+        Member :
         - @group.users.each do |user|
           = user.name
         %li.main-header__left-box__menber__name 
