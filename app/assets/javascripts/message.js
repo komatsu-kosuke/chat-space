@@ -48,7 +48,7 @@ $(function(){
     .done(function(message){
       var html = buildHTML(message);
       $('.messages').append(html);
-      $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
+      $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight}, 'fast');
       $(".new_message")[0].reset();
       $('.input-send').prop('disabled',false);
     })
@@ -84,5 +84,7 @@ $(function(){
       alert('エラーです');
     });
   };
-  setInterval(reloadMessages, 7000);
+  if (document.location.href.match(/\/groups\/\d+\/messages/)) {
+    setInterval(reloadMessages, 7000);
+  }
 })
